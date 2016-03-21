@@ -13,6 +13,8 @@ g++ Byzantine.cpp -o Byzantine
 **Command to run:**  
 ./Byzantine
 
+**Credits**  
+http://marknelson.us/2007/07/23/byzantine/
 
 
 
