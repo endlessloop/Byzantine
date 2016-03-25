@@ -8,6 +8,8 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <ctime>
+#include <cstdlib>
 
 //
 // Some useful global definitions
