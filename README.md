@@ -54,8 +54,7 @@ Sending from process 4 to 1: {?, 24, ?}
 Sending from process 4 to 3: {?, 24, ?}  
 Sending from process 4 to 4: {?, 24, ?}  
 
-Process 0 decides on value 1  
-//--------------------------------------------  
+Process 0 decides on value 1   
 {1,20,?}  
 {1,21,?}  
 {1,23,?}  
@@ -63,7 +62,6 @@ Process 0 decides on value 1
 {1,2,?}  
 
 Process 1 decides on value 1  
-//-------------------------------------------- 
 {1,20,1}  
 {1,21,1}  
 {1,23,1}  
@@ -71,7 +69,6 @@ Process 1 decides on value 1
 {1,2,1}  
 
 Source Process 2 decides on value 1  
-//-------------------------------------------- 
 {1,20,1}  
 {1,21,1}  
 {1,23,1}  
@@ -79,15 +76,13 @@ Source Process 2 decides on value 1
 {1,2,1}  
 
 Process 3 decides on value 1  
-//-------------------------------------------- 
 {1,20,1}  
 {1,21,1}  
 {1,23,1}  
 {?,24,?}  
 {1,2,1}  
 
-Process 4 is faulty
-//-------------------------------------------- 
+Process 4 is faulty  
 {1,20,1}  
 {1,21,1}  
 {1,23,1}  
