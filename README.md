@@ -7,11 +7,14 @@ send an order to lieutenant generals such that:
 (a) If the commanding general is loyal, then every loyal lieutenant obeys the order he sends.  
 (b) All loyal generals obey the same order
 
+# Linux Users  
 **Command to build on commandline:**  
 g++ Byzantine.cpp -o Byzantine  
 
 **Command to run:**  
 ./Byzantine
+
+# Windows Users
 
 **VC++ download Link:**  
 https://www.microsoft.com/en-in/download/details.aspx?id=5555
@@ -19,6 +22,7 @@ https://www.microsoft.com/en-in/download/details.aspx?id=5555
 **Credits**  
 http://marknelson.us/2007/07/23/byzantine/
 
+================================ Output ========================  
 
 **Sample Output:**  
 
