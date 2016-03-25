@@ -151,6 +151,7 @@ class Process {
     Process( int id )
     : mId( id )
     {
+        faulty = false;
         if ( mChildren.size() == 0 )
             GenerateChildren( mTraits.mM, mTraits.mN, std::vector<bool>( mTraits.mN, true ) );
         if ( mId == mTraits.mSource )
