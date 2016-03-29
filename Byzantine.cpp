@@ -402,11 +402,21 @@ Traits Process::mTraits = Traits( SOURCE, M, N, isDebug );
 
 int main()
 {
+    bool flag = true;
+    
+    while(flag) {
     std::cout<<"Enter number of Generals: ";
     std::cin>>N;
     
     std::cout<<"Enter number of Traitors: ";
     std::cin>>M;
+        
+        if(M>N) {
+            std::cout<<"\n\nInvalid Input!!\nNumber Traitors cannot be more than Generals. Try again!\n\n";
+        }else{
+            flag = false;
+        }
+    }
     
     srand (time(NULL));
     SOURCE = rand() % N;
@@ -460,27 +470,28 @@ int main()
             
             char output = processes[ j ].Decide();
             counts[ output ]++;
-            std::cout << " decides on value " <<output;
+            std::cout << " decides on value " <<output<<"\n";
             
         }
         else{
-            std::cout << " is faulty";
+            std::cout << " is faulty\n";
         }
-        std::cout<<"\n===================================\n";
         
-        std::cout<< processes[ i ].Dump() << "\n";
+        if(N!=M) {
+            std::cout<<"===================================\n";
+            std::cout<< processes[ i ].Dump() << "\n";
+        }
     }
     
     
     std::cout<<"================================== Consensus =====================================\n";
     
     // Compute consensus
-    int loyalCount = N - M;
-    if ( counts[ ONE ] > ( loyalCount / 2 ) )
+    if ( counts[ ONE ] > ( N / 2 ) )
         std::cout<<"\nCONSENSUS REACHED!\n";
-    else if ( counts[ ZERO ] > loyalCount / 2 )
+    else if ( counts[ ZERO ] > N / 2 )
         std::cout<<"\nCONSENSUS REACHED!\n";
-    else if ( counts[ ONE ] == counts[ ZERO ] && counts[ ONE ] == ( loyalCount / 2 ) )
+    else if ( counts[ ONE ] == counts[ ZERO ] && counts[ ONE ] == ( N / 2 ) )
         std::cout<<"\nTIE - BREAKING USING DEFAULT VALUE\n";
     else
         std::cout<<"\nUNABLE TO REACH CONSENSUS!\n";
